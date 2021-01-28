@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="ru-RU">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+
+  <!-- Styles -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link id="codyframe" rel="stylesheet" href="assets/css/style.css">
+  <!-- Uncomment the script below if you need to support browsers where CSS Variables have not been implemented (e.g., IE11) -->
+  <!-- <script>
+    if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var cfStyle = document.getElementById('codyframe');if(cfStyle) {var href = cfStyle.getAttribute('href');href = href.replace('style.css', 'style-fallback.css');cfStyle.setAttribute('href', href);}}
+  </script> -->
+  <title>Веб-Формы: Элементы формы - Radio Button | UX Pub</title>
+</head>
+<body>
+
+
+  <div class="flex@md">
+    <aside class="sidebar sidebar--static@md js-sidebar" data-static-class="position-relative z-index-1 flex-grow max-width-xxxxs border-right" id="sidebar" aria-labelledby="sidebar-title">
+      <div class="sidebar__panel height-100%">
+        <header class="sidebar__header z-index-2">
+          <h1 class="text-md text-truncate" id="sidebar-title">Навигация</h1>
+    
+          <button class="reset sidebar__close-btn js-sidebar__close-btn js-tab-focus">
+            <svg class="icon icon--xs" viewBox="0 0 16 16"><title>Close panel</title><g stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><line x1="13.5" y1="2.5" x2="2.5" y2="13.5"></line><line x1="2.5" y1="2.5" x2="13.5" y2="13.5"></line></g></svg>
+          </button>
+        </header>
+        
+        <div class="position-relative z-index-1 height-100%">
+          <!-- start sidebar content -->
+          <nav class="position-sticky padding-y-md text-sm js-sidenav" style="top: 0;">
+            <div class="margin-bottom-xs padding-x-sm">
+              <span class="text-sm color-contrast-medium">Навигация</span>
+            </div>
+            
+
+            <ul class="sidenav__list">
+
+              <!-- Form elements -->
+              <li class="sidenav__item sidenav__item--expanded">
+                <a href="#0" class="sidenav__link">                  
+                  <span class="sidenav__text">Елементы формы</span>
+                </a>
+
+                <button class="reset sidenav__sublist-control js-sidenav__sublist-control js-tab-focus" aria-label="Toggle sub navigation">
+                  <svg class="icon" viewBox="0 0 12 12"><polygon points="4 3 8 6 4 9 4 3"/></svg>
+                </button>
+
+                <ul class="sidenav__list">
+                  <li class="sidenav__item">
+                    <a href="elements-input.html" class="sidenav__link">
+                      <span class="sidenav__text">Поля ввода (Input)</span>
+                    </a>
+                  </li>
+        
+                  <li class="sidenav__item">
+                    <a href="elements-textarea.html" class="sidenav__link">
+                      <span class="sidenav__text">Текстовое поле (Textarea)</span>
+                    </a>
+                  </li>
+
+                  <li class="sidenav__item">
+                    <a href="elements-radio.html" class="sidenav__link" aria-current="page">
+                      <span class="sidenav__text">Переключатели (Radio Button)</span>
+                    </a>
+                  </li>
+
+                  <li class="sidenav__item">
+                    <a href="elements-checkbox.html" class="sidenav__link">
+                      <span class="sidenav__text">Флажки (Checkbox)</span>
+                    </a>
+                  </li>
+
+                  <li class="sidenav__item">
+                    <a href="elements-select.html" class="sidenav__link">
+                      <span class="sidenav__text">Выбор (Select)</span>
+                    </a>
+                  </li>
+
+                  <li class="sidenav__item">
+                    <a href="elements-slider.html" class="sidenav__link">
+                      <span class="sidenav__text">Ползунок (Slider)</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              
+
+              <!-- Form Labels -->
+              <li class="sidenav__item">
+                <a href="#0" class="sidenav__link">                  
+                  <span class="sidenav__text">Подписи к полям</span>
+                </a>
+
+                <button class="reset sidenav__sublist-control js-sidenav__sublist-control js-tab-focus" aria-label="Toggle sub navigation">
+                  <svg class="icon" viewBox="0 0 12 12"><polygon points="4 3 8 6 4 9 4 3"/></svg>
+                </button>
+
+                <ul class="sidenav__list">
+                  <li class="sidenav__item">
+                    <a href="label-placeholder.html" class="sidenav__link">
+                      <span class="sidenav__text">Без подписей (Placeholder)</span>
+                    </a>
+                  </li>
+        
+                  <li class="sidenav__item">
+                    <a href="label-default.html" class="sidenav__link">
+                      <span class="sidenav__text">Подпись сверху (Label)</span>
+                    </a>
+                  </li>
+
+                  <li class="sidenav__item">
+                    <a href="label-floating.html" class="sidenav__link">
+                      <span class="sidenav__text">Плавающие подписи (Floating label)</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+
+              <!-- Form Layout -->
+              <li class="sidenav__item">
+                <a href="#0" class="sidenav__link">                  
+                  <span class="sidenav__text">Варианты разметки форм</span>
+                </a>
+
+                <button class="reset sidenav__sublist-control js-sidenav__sublist-control js-tab-focus" aria-label="Toggle sub navigation">
+                  <svg class="icon" viewBox="0 0 12 12"><polygon points="4 3 8 6 4 9 4 3"/></svg>
+                </button>
+
+                <ul class="sidenav__list">
+                  <li class="sidenav__item">
+                    <a href="form-layout-1.html" class="sidenav__link">
+                      <span class="sidenav__text">Подписи сверху</span>
+                    </a>
+                  </li>
+        
+                  <li class="sidenav__item">
+                    <a href="form-layout-2.html" class="sidenav__link">
+                      <span class="sidenav__text">Подписи слева 1</span>
+                    </a>
+                  </li>
+
+                  <li class="sidenav__item">
+                    <a href="form-layout-3.html" class="sidenav__link">
+                      <span class="sidenav__text">Подписи слева 2</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              
+              <li class="sidenav__item">
+                <a href="form-validation.html" class="sidenav__link">
+                  <span class="sidenav__text">Валидация форм</span>
+                </a>
+              </li>
+            </ul>
+
+            <!--
+            <div class="sidenav__divider margin-y-xs" role="presentation"></div>
+
+            <div class="sidenav__label margin-bottom-xxxs">
+              <span class="text-sm color-contrast-medium">Other</span>
+            </div>
+            -->
+          </nav>
+          
+          <!-- end sidebar content -->
+        </div>
+      </div>
+    </aside>
+
+
+
+     <!-- start main content -->
+    <main class="position-relative z-index-1 flex-grow min-height-100vh">
+     
+      <div class="padding-x-lg padding-x-xxl@lg padding-y-lg">
+        <h1>Элементы веб-формы</h1>
+        
+
+        <nav class="s-tabs margin-top-lg">
+          <ul class="s-tabs__list">
+            <li><a class="s-tabs__link" href="elements-input.html">Input</a></li>
+            <li><a class="s-tabs__link" href="elements-textarea.html">Textarea</a></li>
+            <li><a class="s-tabs__link s-tabs__link--current" href="elements-radio.html">Radio Button</a></li>
+            <li><a class="s-tabs__link" href="elements-checkbox.html">Checkbox</a></li>
+            <li><a class="s-tabs__link" href="elements-select.html">Select</a></li>
+            <li><a class="s-tabs__link" href="elements-slider.html">Slider</a></li>
+          </ul>
+        </nav>
+
+
+
+
+        <section class="padding-top-md margin-top-md">
+          <div class="max-width-xs">
+            <h4 class="margin-bottom-lg">Переключатели (Radio Button)</h4>
+
+            <!-- Simple Radio-->
+            <div class="box margin-bottom-lg">
+              <h5 class="form-legend">Выберите предпочтительный способ связи:</h5>
+          
+              <ul class="flex flex-column gap-xxxs">
+                <li>
+                  <input class="radio" type="radio" name="radio-button" id="radio-1" checked>
+                  <label for="radio-1">Email</label>
+                </li>
+          
+                <li>
+                  <input class="radio" type="radio" name="radio-button" id="radio-2">
+                  <label for="radio-2">Телефон</label>
+                </li>
+          
+                <li>
+                  <input class="radio" type="radio" name="radio-button" id="radio-3">
+                  <label for="radio-3">Telegram</label>
+                </li>
+              </ul>
+            </div>
+
+
+            <!-- Inline Radio-->
+            <div class="box box--has-bg margin-bottom-lg">
+              <h5 class="form-legend">Выберите размер пиццы:</h5>
+          
+              <ul class="flex flex-wrap gap-md">
+                <li>
+                  <input class="radio" type="radio" name="inline-radio-button" id="inline-radio-1" checked>
+                  <label for="inline-radio-1">S (маленький)</label>
+                </li>
+          
+                <li>
+                  <input class="radio" type="radio" name="inline-radio-button" id="inline-radio-2">
+                  <label for="inline-radio-2">M (средний)</label>
+                </li>
+          
+                <li>
+                  <input class="radio" type="radio" name="inline-radio-button" id="inline-radio-3">
+                  <label for="inline-radio-3">L (большой)</label>
+                </li>
+              </ul>
+            </div>
+
+
+
+
+            <!-- Colors Choice -->
+            <div class="box color-swatches margin-bottom-lg js-color-swatches">
+              <h5 class="color-swatches__legend text-sm color-contrast-medium margin-bottom-xs" aria-live="polite" aria-atomic="true">
+                Цвет: <span class="color-swatches__color color-contrast-high js-color-swatches__color">Малиновый</span>
+              </h5>
+            
+              <select class="js-color-swatches__select" aria-label="Select a color">
+                <option value="Малиновый" data-style="background-color: #DC143C;">Малиновый</option>
+                <option value="Лазурный" data-style="background-color: #87CEEB;">Лазурный</option>
+                <option value="Индиго" data-style="background-color: #4B0082;">Индиго</option>
+                <option value="Бирюзовый" data-style="background-color: #40E0D0;">Бирюзовый</option>                
+              </select>
+            </div>
+
+
+
+            <!-- Choice buttons -->  
+            <div class="box box--has-bg margin-bottom-lg">
+              <h5 class="form-legend">Выберите способ доставки</h5>
+
+              <div class="choice-btns gap-xxs js-choice-btns">
+
+                <div class="choice-btn padding-sm js-choice-btn">
+                  <!-- fallback -->
+                  <div class="choice-btn__fallback">
+                    <input type="radio" name="choice-radio-buttons" id="choice-radio-button-1" checked>
+                    <label for="choice-radio-button-1">Доставка "Новой Почтой", 2-3 дня, 49.00 грн.</label>
+                  </div>
+
+                  <!-- custom input -->
+                  <div class="choice-btn__grid" aria-hidden="true">
+                    <div class="choice-btn__input choice-btn__input--radio">
+                      <svg class="icon" viewBox="0 0 16 16">
+                        <circle fill="currentColor" cx="8" cy="8" r="4" /></svg>
+                    </div>
+
+                    <div class="flex flex-wrap gap-xs justify-between">
+                      <div>
+                        <p class="color-contrast-higher">Доставка "Новой Почтой"</p>
+                        <p class="color-contrast-medium text-sm">2-3 дня</p>
+                      </div>
+
+                      <p class="color-contrast-higher">49.00 грн.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="choice-btn padding-sm js-choice-btn">
+                  <!-- fallback -->
+                  <div class="choice-btn__fallback">
+                    <input type="radio" name="choice-radio-buttons" id="choice-radio-button-2">
+                    <label for="choice-radio-button-2">Доставка курьером, завтра, после 12:00, 99.00 грн.</label>
+                  </div>
+
+                  <!-- custom input -->
+                  <div class="choice-btn__grid" aria-hidden="true">
+                    <div class="choice-btn__input choice-btn__input--radio">
+                      <svg class="icon" viewBox="0 0 16 16">
+                        <circle fill="currentColor" cx="8" cy="8" r="4" /></svg>
+                    </div>
+
+                    <div class="flex flex-wrap gap-xs justify-between">
+                      <div>
+                        <p class="color-contrast-higher">Доставка курьером</p>
+                        <p class="color-contrast-medium text-sm">завтра, после 12:00</p>
+                      </div>
+
+                      <p class="color-contrast-higher">99.00 грн.</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
+
+            <!-- Settings Table Switchers -->  
+            <div class="tbl settings-tbl text-sm margin-bottom-xxl">
+              <table class="tbl__table border-bottom border-2" aria-label="Table Example">
+                <thead class="tbl__header border-bottom border-2">
+                  <tr class="tbl__row">
+                    <th class="tbl__cell text-left" scope="col">
+                      <span class="font-semibold">Уведомления</span>
+                    </th>
+
+                    <th class="sr-only" scope="col">Вкл/откл опцию</span></th>
+                  </tr>
+                </thead>
+
+                <tbody class="tbl__body">
+                  <tr class="tbl__row">
+                    <td class="tbl__cell" role="cell">
+                      <p>Всплывающие уведомления</p>
+                    </td>
+
+                    <td class="tbl__cell" role="cell">
+                      <div class="flex justify-end">
+
+                        <div class="switch ">
+                          <input class="switch__input" type="checkbox" id="switch-push-notifications">
+                          <label class="switch__label" for="switch-push-notifications" aria-hidden="true">Всплывающие уведомления</label>
+                          <div class="switch__marker" aria-hidden="true"></div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr class="tbl__row">
+                    <td class="tbl__cell" role="cell">
+                      <p>SMS уведомления</p>
+                    </td>
+
+                    <td class="tbl__cell" role="cell">
+                      <div class="flex justify-end">
+
+                        <div class="switch ">
+                          <input class="switch__input" type="checkbox" id="switch-sms-notifications" checked>
+                          <label class="switch__label" for="switch-sms-notifications" aria-hidden="true">SMS уведомления</label>
+                          <div class="switch__marker" aria-hidden="true"></div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr class="tbl__row">
+                    <td class="tbl__cell" role="cell">
+                      <p>Email уведомления</p>
+                    </td>
+
+                    <td class="tbl__cell" role="cell">
+                      <div class="flex justify-end">
+
+                        <div class="switch ">
+                          <input class="switch__input" type="checkbox" id="switch-email-notifications">
+                          <label class="switch__label" for="switch-email-notifications" aria-hidden="true">Email уведомления</label>
+                          <div class="switch__marker" aria-hidden="true"></div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            
+
+            <!-- Switchers -->
+            <div class="flex items-center">
+              <!-- Radio Switcher -->
+              <ul class="radio-switch-v2 margin-bottom-lg">
+                <li class="radio-switch-v2__item">
+                  <input class="radio-switch-v2__input reset" type="radio" name="radioSwitch2" id="radioSwitch1" checked>
+                  <label class="radio-switch-v2__label" for="radioSwitch1">Ежемесячно</label>
+                </li>
+
+                <li class="radio-switch-v2__item">
+                  <input class="radio-switch-v2__input reset" type="radio" name="radioSwitch2" id="radioSwitch2">
+                  <label class="radio-switch-v2__label" for="radioSwitch2">Ежегодно</label>
+                  <div aria-hidden="true" class="radio-switch-v2__toggle"><span class="radio-switch-v2__marker"></span></div>
+                </li>
+              </ul>
+
+
+
+              <!-- Radio Switch -->
+              <ul class="radio-switch margin-bottom-lg margin-left-xxl">
+                <li class="radio-switch__item">
+                  <input class="radio-switch__input sr-only" type="radio" name="radio-switch-name" id="radio-switch-1" checked>
+                  <label class="radio-switch__label" for="radio-switch-1"><svg class="icon icon--xs" viewBox="0 0 16 16">
+                      <title>Включить дневной режим</title>
+                      <path d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.414-1.414zM14 7h2v2h-2zM12.95 14.433l-1.415-1.414 1.414-1.414 1.415 1.413zM7 14h2v2H7zM2.98 14.363L1.566 12.95l1.415-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.707L4.465 3.12 3.05 4.535 1.636 3.121z" />
+                      <path d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z" />
+                    </svg></label>
+                </li>
+
+                <li class="radio-switch__item">
+                  <input class="radio-switch__input sr-only" type="radio" name="radio-switch-name" id="radio-switch-2">
+                  <label class="radio-switch__label" for="radio-switch-2"><svg class="icon icon--xs" viewBox="0 0 16 16">
+                      <title>Включить ночной режим</title>
+                      <path d="M6,0C2.5,0.9,0,4.1,0,7.9C0,12.4,3.6,16,8.1,16c3.8,0,6.9-2.5,7.9-6C9.9,11.7,4.3,6.1,6,0z"></path>
+                    </svg></label>
+                  <div aria-hidden="true" class="radio-switch__marker"></div>
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+        </section>
+        
+        
+      </div> <!-- /.container -->
+      
+    </main>
+    <!-- end main content -->
+
+  </div>
+
+
+
+  <!-- Scripts -->
+  <script src="assets/js/scripts.js"></script>
+
+</body>
+</html>

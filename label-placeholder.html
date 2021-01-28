@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="ru-RU">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+
+  <!-- Styles -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link id="codyframe" rel="stylesheet" href="assets/css/style.css">
+  <!-- Uncomment the script below if you need to support browsers where CSS Variables have not been implemented (e.g., IE11) -->
+  <!-- <script>
+    if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var cfStyle = document.getElementById('codyframe');if(cfStyle) {var href = cfStyle.getAttribute('href');href = href.replace('style.css', 'style-fallback.css');cfStyle.setAttribute('href', href);}}
+  </script> -->
+  <title>Веб-Формы: Подписи к полям - Placeholder | UX Pub</title>
+</head>
+<body>
+
+
+  <div class="flex@md">
+    <aside class="sidebar sidebar--static@md js-sidebar" data-static-class="position-relative z-index-1 flex-grow max-width-xxxxs border-right" id="sidebar" aria-labelledby="sidebar-title">
+      <div class="sidebar__panel height-100%">
+        <header class="sidebar__header z-index-2">
+          <h1 class="text-md text-truncate" id="sidebar-title">Навигация</h1>
+    
+          <button class="reset sidebar__close-btn js-sidebar__close-btn js-tab-focus">
+            <svg class="icon icon--xs" viewBox="0 0 16 16"><title>Close panel</title><g stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><line x1="13.5" y1="2.5" x2="2.5" y2="13.5"></line><line x1="2.5" y1="2.5" x2="13.5" y2="13.5"></line></g></svg>
+          </button>
+        </header>
+        
+        <div class="position-relative z-index-1 height-100%">
+          <!-- start sidebar content -->
+          <nav class="position-sticky padding-y-md text-sm js-sidenav" style="top: 0;">
+            <div class="sidenav__label margin-bottom-xxxs">
+              <span class="text-sm color-contrast-medium">UX/UI</span>
+            </div>
+            
+
+            <ul class="sidenav__list">
+
+              <!-- Form elements -->
+              <li class="sidenav__item">
+                <a href="#0" class="sidenav__link">                  
+                  <span class="sidenav__text">Елементы формы</span>
+                </a>
+
+                <button class="reset sidenav__sublist-control js-sidenav__sublist-control js-tab-focus" aria-label="Toggle sub navigation">
+                  <svg class="icon" viewBox="0 0 12 12"><polygon points="4 3 8 6 4 9 4 3"/></svg>
+                </button>
+
+                <ul class="sidenav__list">
+                  <li class="sidenav__item">
+                    <a href="elements-input.html" class="sidenav__link">
+                      <span class="sidenav__text">Поля ввода (Input)</span>
+                    </a>
+                  </li>
+        
+                  <li class="sidenav__item">
+                    <a href="elements-textarea.html" class="sidenav__link">
+                      <span class="sidenav__text">Текстовое поле (Textarea)</span>
+                    </a>
+                  </li>
+
+                  <li class="sidenav__item">
+                    <a href="elements-radio.html" class="sidenav__link">
+                      <span class="sidenav__text">Переключатели (Radio Button)</span>
+                    </a>
+                  </li>
+
+                  <li class="sidenav__item">
+                    <a href="elements-checkbox.html" class="sidenav__link">
+                      <span class="sidenav__text">Флажки (Checkbox)</span>
+                    </a>
+                  </li>
+
+                  <li class="sidenav__item">
+                    <a href="elements-select.html" class="sidenav__link">
+                      <span class="sidenav__text">Выбор (Select)</span>
+                    </a>
+                  </li>
+
+                  <li class="sidenav__item">
+                    <a href="elements-slider.html" class="sidenav__link">
+                      <span class="sidenav__text">Ползунок (Slider)</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              
+
+              <!-- Form Labels -->
+              <li class="sidenav__item sidenav__item--expanded">
+                <a href="#0" class="sidenav__link">                  
+                  <span class="sidenav__text">Подписи к полям</span>
+                </a>
+
+                <button class="reset sidenav__sublist-control js-sidenav__sublist-control js-tab-focus" aria-label="Toggle sub navigation">
+                  <svg class="icon" viewBox="0 0 12 12"><polygon points="4 3 8 6 4 9 4 3"/></svg>
+                </button>
+
+                <ul class="sidenav__list">
+                  <li class="sidenav__item">
+                    <a href="label-placeholder.html" class="sidenav__link" aria-current="page">
+                      <span class="sidenav__text">Без подписей (Placeholder)</span>
+                    </a>
+                  </li>
+        
+                  <li class="sidenav__item">
+                    <a href="label-default.html" class="sidenav__link">
+                      <span class="sidenav__text">Подпись сверху (Label)</span>
+                    </a>
+                  </li>
+
+                  <li class="sidenav__item">
+                    <a href="label-floating.html" class="sidenav__link">
+                      <span class="sidenav__text">Плавающие подписи (Floating label)</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+
+              <!-- Form Layout -->
+              <li class="sidenav__item">
+                <a href="#0" class="sidenav__link">                  
+                  <span class="sidenav__text">Варианты разметки форм</span>
+                </a>
+
+                <button class="reset sidenav__sublist-control js-sidenav__sublist-control js-tab-focus" aria-label="Toggle sub navigation">
+                  <svg class="icon" viewBox="0 0 12 12"><polygon points="4 3 8 6 4 9 4 3"/></svg>
+                </button>
+
+                <ul class="sidenav__list">
+                  <li class="sidenav__item">
+                    <a href="form-layout-1.html" class="sidenav__link">
+                      <span class="sidenav__text">Подписи сверху</span>
+                    </a>
+                  </li>
+        
+                  <li class="sidenav__item">
+                    <a href="form-layout-2.html" class="sidenav__link">
+                      <span class="sidenav__text">Подписи слева 1</span>
+                    </a>
+                  </li>
+
+                  <li class="sidenav__item">
+                    <a href="form-layout-3.html" class="sidenav__link">
+                      <span class="sidenav__text">Подписи слева 2</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="sidenav__item">
+                <a href="form-validation.html" class="sidenav__link">
+                  <span class="sidenav__text">Валидация форм</span>
+                </a>
+              </li>
+            </ul>
+
+            <!--
+            <div class="sidenav__divider margin-y-xs" role="presentation"></div>
+
+            <div class="sidenav__label margin-bottom-xxxs">
+              <span class="text-sm color-contrast-medium">Other</span>
+            </div>
+            -->
+
+          </nav>
+          
+          <!-- end sidebar content -->
+        </div>
+      </div>
+    </aside>
+
+
+
+     <!-- start main content -->
+    <main class="position-relative z-index-1 flex-grow min-height-100vh">
+     
+      <div class="padding-x-lg padding-x-xxl@lg padding-y-lg">
+        <h1>Подписи к полям формы</h1>
+        
+
+        <nav class="s-tabs margin-top-lg">
+          <ul class="s-tabs__list">
+            <li><a class="s-tabs__link s-tabs__link--current" href="label-placeholder.html">Placeholders</a></li>
+            <li><a class="s-tabs__link" href="label-default.html">Labels</a></li>
+            <li><a class="s-tabs__link" href="label-floating.html">Floating labels</a></li>
+          </ul>
+        </nav>
+
+
+
+
+        <section class="padding-top-md margin-top-md">
+          <div class="">
+            <h4 class="margin-bottom-lg">Формы без подписей (Placeholders)</h4>
+
+            <div class="text-divider"><span class="font-semibold color-success">Хорошие примеры</span></div>
+    
+              <!-- Search form -->
+              <div class="box margin-bottom-lg max-width-xxs">
+                <div class="search-input search-input--icon-right">
+                  <input class="search-input__input form-control" type="search" name="search-input" id="search-input" placeholder="Search..." aria-label="Search">
+                  <button class="search-input__btn">
+                    <svg class="icon" viewBox="0 0 24 24"><title>Submit</title><g stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" stroke="currentColor" fill="none" stroke-miterlimit="10"><line x1="22" y1="22" x2="15.656" y2="15.656"></line><circle cx="10" cy="10" r="8"></circle></g></svg>
+                  </button>
+                </div>
+              </div>
+
+
+              <!-- Subscribe Form 1-->
+              <div class="box margin-bottom-lg max-width-xxs">
+                <div class="margin-bottom-xs">
+                  <svg class="icon icon--xl" viewBox="0 0 64 64" aria-hidden="true"><path d="M54.053,33.3l-21-13a2,2,0,0,0-2.106,0l-21,13A2,2,0,0,0,9,35V58a2,2,0,0,0,2,2H53a2,2,0,0,0,2-2V35A2,2,0,0,0,54.053,33.3Z" fill="#212121"/><path d="M47,51H17V16a2,2,0,0,1,2-2H45a2,2,0,0,1,2,2Z" fill="#e3e3e3"/><path d="M40,23H24a1,1,0,0,1,0-2H40a1,1,0,0,1,0,2Z" fill="#aeaeae"/><path d="M40,30H24a1,1,0,0,1,0-2H40a1,1,0,0,1,0,2Z" fill="#aeaeae"/><path d="M33,37H24a1,1,0,0,1,0-2h9a1,1,0,0,1,0,2Z" fill="#aeaeae"/><path d="M55,35,32,45.867,9,35V58c0,.015,0,.029,0,.044a1.927,1.927,0,0,0,.027.26c.006.04.008.081.016.12l0,.016c0,.006.006.009.008.014A2,2,0,0,0,11,60H53a2,2,0,0,0,1.951-1.56A1.916,1.916,0,0,0,55,58.022c0-.008.006-.013.006-.022Z" fill="#949494"/><path d="M13,7.029a3,3,0,0,1-3-3,1,1,0,0,0-2,0,3,3,0,0,1-3,3,1,1,0,0,0,0,2,3,3,0,0,1,3,3,1,1,0,0,0,2,0,3,3,0,0,1,3-3,1,1,0,0,0,0-2Z" fill="#ffd764"/><circle cx="55" cy="14" r="3" fill="#ff7163"/></svg>
+                </div>
+            
+                <div class="text-component margin-bottom-md">
+                  <h3>Подпишитесь на нашу рассылку</h3>
+                  <p class="text-sm">Получайте ежемесячный обзор последних новостей, статей и ресурсов.</p>
+                </div>
+              
+                <form class="grid gap-xxs" action="#" novalidate>
+                  <input class="form-control" aria-label="Email" type="email" placeholder="Email адрес">
+                  <button class="btn btn--primary" type="submit">Подписаться</button>
+                </form>
+              
+                <div class="margin-top-xs">
+                  <p class="color-contrast-medium text-xs">Мы не спамим. Можно отписаться в любой момент.</p>
+                </div>
+              </div>
+    
+    
+    
+              <!-- Subscribe Form 2-->
+              <div class="box max-width-sm margin-bottom-xl">
+                <div class="text-component margin-bottom-md">
+                  <h3>Подпишитесь на нашу рассылку</h3>
+                  <p class="text-sm">Получайте ежемесячный обзор последних новостей, статей и ресурсов.</p>
+                </div>
+            
+                <form class="grid gap-xxs" action="#" novalidate>
+                  <div class="col@xs min-width-0">
+                    <input class="form-control width-100% height-100%" aria-label="Name" type="text" placeholder="Ваше имя">
+                  </div>
+            
+                  <div class="col@xs min-width-0">
+                    <input class="form-control width-100% height-100%" aria-label="Email" type="email" placeholder="Email">
+                  </div>
+            
+                  <div class="col-content@sm">
+                    <button class="btn btn--primary width-100% height-100%" type="submit">Подписаться</button>
+                  </div>
+                </form>
+            
+                <div class="margin-top-xs">
+                  <small class="text-xs color-contrast-medium">Нажимая кнопку "Подписаться" вы соглашаетесь с <a class="color-contrast-high" href="#0">Политикой конфиденциальности</a>.</small>
+                </div>
+              </div>
+    
+    
+    
+              <div class="text-divider"><span class="font-semibold color-error">Плохие примеры</span></div>
+    
+              <!-- Register Form -->
+              <div class="box max-width-sm margin-bottom-lg">            
+    
+                <form class="sign-up-form" action="#" novalidate>
+                  <div class="text-component text-center margin-bottom-sm">
+                    <h3>Регистрация</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>
+                    Уже зарегистрированы? <a href="#0">Войти</a></p>
+                  </div>
+    
+                  <div class="grid gap-xs">
+                    <div class="col-6@xs">
+                      <button class="btn btn--subtle width-100%" type="button">
+                        <svg aria-hidden="true" class="icon margin-right-xxxs" viewBox="0 0 16 16"><g><path fill="#55acee" d="M16,3c-0.6,0.3-1.2,0.4-1.9,0.5c0.7-0.4,1.2-1,1.4-1.8c-0.6,0.4-1.3,0.6-2.1,0.8c-0.6-0.6-1.5-1-2.4-1 C9.3,1.5,7.8,3,7.8,4.8c0,0.3,0,0.5,0.1,0.7C5.2,5.4,2.7,4.1,1.1,2.1c-0.3,0.5-0.4,1-0.4,1.7c0,1.1,0.6,2.1,1.5,2.7 c-0.5,0-1-0.2-1.5-0.4c0,0,0,0,0,0c0,1.6,1.1,2.9,2.6,3.2C3,9.4,2.7,9.4,2.4,9.4c-0.2,0-0.4,0-0.6-0.1c0.4,1.3,1.6,2.3,3.1,2.3 c-1.1,0.9-2.5,1.4-4.1,1.4c-0.3,0-0.5,0-0.8,0c1.5,0.9,3.2,1.5,5,1.5c6,0,9.3-5,9.3-9.3c0-0.1,0-0.3,0-0.4C15,4.3,15.6,3.7,16,3z"></path></g></svg>
+                        <span class="text-sm">C помощью Twitter</span>
+                      </button>
+                    </div>
+                    
+                    <div class="col-6@xs">
+                      <button class="btn btn--subtle width-100%" type="button">
+                        <svg aria-hidden="true" class="icon margin-right-xxxs" viewBox="0 0 16 16"><g><path fill="#3b5999" d="M15.3,0H0.7C0.3,0,0,0.3,0,0.7v14.7C0,15.7,0.3,16,0.7,16H8v-5H6V8h2V6c0-2.1,1.2-3,3-3 c0.9,0,1.8,0,2,0v3h-1c-0.6,0-1,0.4-1,1v1h2.6L13,11h-2v5h4.3c0.4,0,0.7-0.3,0.7-0.7V0.7C16,0.3,15.7,0,15.3,0z"></path></g></svg>
+                        <span class="text-sm">C помощью Facebook</span>
+                      </button>
+                    </div>
+                  </div>
+    
+                  <p class="text-center margin-y-sm">или</p>
+    
+                  <div class="margin-bottom-sm">
+                    <div class="grid gap-xs">
+                      <div class="col-6@md">
+                        <input class="form-control width-100%" type="text" name="input-first-name" placeholder="Имя">
+                      </div>
+    
+                      <div class="col-6@md">
+                        <input class="form-control width-100%" type="text" name="input-last-name" placeholder="Фамилия">
+                      </div>
+                    </div>
+                  </div>
+    
+                  <div class="margin-bottom-sm">
+                    <div class="grid gap-xs">
+                      <div class="col-6@md">
+                        <input class="form-control width-100%" type="email" name="input-email" placeholder="Email">
+                      </div>
+    
+                      <div class="col-6@md">
+                        <input class="form-control width-100%" type="tel" name="input-phone" placeholder="Телефон">
+                      </div>
+                    </div>                
+                  </div>
+    
+                  <div class="margin-bottom-md">
+                    <div class="grid gap-xs">
+                      <div class="col-6@md">
+                        <input class="form-control width-100%" type="password" name="input-password" placeholder="Пароль">
+                      </div>
+    
+                      <div class="col-6@md">
+                        <input class="form-control width-100%" type="password" name="input-password" placeholder="Подтвердить">
+                      </div>
+                    </div>                
+                  </div>
+    
+                  <div class="margin-bottom-xs">
+                    <button class="btn btn--primary btn--md width-100%" type="submit">Зарегистрироваться</button>
+                  </div>
+    
+                  <div class="text-center">
+                    <p class="text-xs color-contrast-medium">Присоединяясь, вы соглашаетесь с нашими <a class="color-contrast-high" href="#0">Правилами</a> и <a class="color-contrast-high" href="#0">Политикой конфиденциальности</a>.</p>
+                  </div>
+                </form>
+              </div>
+    
+    
+    
+    
+              <!-- Order Form -->
+              <div class="box max-width-sm margin-bottom-lg">            
+    
+                <form class="sign-up-form" action="#" novalidate>
+                  <div class="text-component text-center margin-bottom-sm">
+                    <h3>Заказать тур</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                  </div>
+    
+                  <fieldset class="margin-bottom-md">
+                    <div class="margin-bottom-sm">
+                      <div class="grid gap-xs">
+                        <div class="col-6@md">
+                          <div class="select">
+                            <select class="select__input form-control" name="selectCountry">
+                                <option value="" selected disabled>Выберите страну</option>
+                                <option value="1">Турция</option>
+                                <option value="2">Египет</option>
+                                <option value="3">Черногория</option>
+                                <option value="4">Хорватия</option>
+                                <option value="5">Италия</option>
+                                <option value="6">Испания</option>
+                                <option value="7">Норвегия</option>
+                                <option value="8">Хорватия</option>
+                                <option value="9">Алжир</option>
+                              </optgroup>
+                            </select>
+                            
+                            <svg class="icon select__icon" aria-hidden="true" viewBox="0 0 16 16"><g stroke-width="1" stroke="currentColor"><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="15.5,4.5 8,12 0.5,4.5 "></polyline></g></svg>
+                          </div>
+                        </div>
+      
+                        <div class="col-6@md">
+                          <div class="select">
+                            <select class="select__input form-control" name="selectResort">
+                              <option value="" selected disabled>Выберите курорт</option>
+                                <option value="1">Алания</option>
+                                <option value="2">Анталия</option>
+                                <option value="3">Бодрум</option>
+                                <option value="4">Кемер</option>
+                                <option value="5">Мармарис</option>
+                                <option value="6">Фетхие</option>
+                              </optgroup>
+                            </select>
+                            
+                            <svg class="icon select__icon" aria-hidden="true" viewBox="0 0 16 16"><g stroke-width="1" stroke="currentColor"><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="15.5,4.5 8,12 0.5,4.5 "></polyline></g></svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+    
+                    <div class="margin-bottom-sm">
+                      <div class="grid gap-xs">
+                        <div class="col-6@md">
+                          <input class="form-control width-100%" type="text" name="input-date" placeholder="Когда?">
+                        </div>
+      
+                        <div class="col-6@md">
+                          <input class="form-control width-100%" type="text" name="input-duration" placeholder="Длительность">
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                  
+                  <fieldset>
+                    <div class="margin-bottom-sm">
+                      <div class="grid gap-xs">
+                        <div class="col-6@md">
+                          <input class="form-control width-100%" type="text" name="input-first-name" placeholder="Имя">
+                        </div>
+      
+                        <div class="col-6@md">
+                          <input class="form-control width-100%" type="text" name="input-last-name" placeholder="Фамилия">
+                        </div>
+                      </div>
+                    </div>
+      
+                    <div class="margin-bottom-sm">
+                      <div class="grid gap-xs">
+                        <div class="col-6@md">
+                          <input class="form-control width-100%" type="email" name="input-email" placeholder="Email">
+                        </div>
+      
+                        <div class="col-6@md">
+                          <input class="form-control width-100%" type="tel" name="input-phone" placeholder="Телефон">
+                        </div>
+                      </div>                
+                    </div>
+      
+                    <div class="margin-bottom-sm">
+                      <textarea class="form-control width-100%" name="input-textarea" maxlength="300" placeholder="Пожелания (например категория отеля, питание, цена ...)" style="min-height: 120px;"></textarea>
+                    </div>
+                  </fieldset>
+                  
+    
+                  <div class="margin-bottom-xs">
+                    <button class="btn btn--primary btn--md width-100%" type="submit">Отправить</button>
+                  </div>
+                </form>
+              </div>
+
+            
+          </div>
+        </section>
+    
+        
+      </div> <!-- /.container -->
+      
+    </main>
+    <!-- end main content -->
+
+  </div>
+
+
+
+  <!-- Scripts -->
+  <script src="assets/js/scripts.js"></script>
+
+</body>
+</html>

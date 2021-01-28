@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="ru-RU">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+
+  <!-- Styles -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link id="codyframe" rel="stylesheet" href="assets/css/style.css">
+  <!-- Uncomment the script below if you need to support browsers where CSS Variables have not been implemented (e.g., IE11) -->
+  <!-- <script>
+    if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var cfStyle = document.getElementById('codyframe');if(cfStyle) {var href = cfStyle.getAttribute('href');href = href.replace('style.css', 'style-fallback.css');cfStyle.setAttribute('href', href);}}
+  </script> -->
+  <title>Веб-Формы: Валидация | UX Pub</title>
+</head>
+<body>
+
+
+  <div class="flex@md">
+    <aside class="sidebar sidebar--static@md js-sidebar" data-static-class="position-relative z-index-1 flex-grow max-width-xxxxs border-right" id="sidebar" aria-labelledby="sidebar-title">
+      <div class="sidebar__panel height-100%">
+        <header class="sidebar__header z-index-2">
+          <h1 class="text-md text-truncate" id="sidebar-title">Навигация</h1>
+    
+          <button class="reset sidebar__close-btn js-sidebar__close-btn js-tab-focus">
+            <svg class="icon icon--xs" viewBox="0 0 16 16"><title>Close panel</title><g stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><line x1="13.5" y1="2.5" x2="2.5" y2="13.5"></line><line x1="2.5" y1="2.5" x2="13.5" y2="13.5"></line></g></svg>
+          </button>
+        </header>
+        
+        <div class="position-relative z-index-1 height-100%">
+          <!-- start sidebar content -->
+          <nav class="position-sticky padding-y-md text-sm js-sidenav" style="top: 0;">
+            <div class="sidenav__label margin-bottom-xxxs">
+              <span class="text-sm color-contrast-medium">UX/UI</span>
+            </div>
+            
+
+            <ul class="sidenav__list">
+
+              <!-- Form elements -->
+              <li class="sidenav__item">
+                <a href="#0" class="sidenav__link">                  
+                  <span class="sidenav__text">Елементы формы</span>
+                </a>
+
+                <button class="reset sidenav__sublist-control js-sidenav__sublist-control js-tab-focus" aria-label="Toggle sub navigation">
+                  <svg class="icon" viewBox="0 0 12 12"><polygon points="4 3 8 6 4 9 4 3"/></svg>
+                </button>
+
+                <ul class="sidenav__list">
+                  <li class="sidenav__item">
+                    <a href="elements-input.html" class="sidenav__link">
+                      <span class="sidenav__text">Поля ввода (Input)</span>
+                    </a>
+                  </li>
+        
+                  <li class="sidenav__item">
+                    <a href="elements-textarea.html" class="sidenav__link">
+                      <span class="sidenav__text">Текстовое поле (Textarea)</span>
+                    </a>
+                  </li>
+
+                  <li class="sidenav__item">
+                    <a href="elements-radio.html" class="sidenav__link">
+                      <span class="sidenav__text">Переключатели (Radio Button)</span>
+                    </a>
+                  </li>
+
+                  <li class="sidenav__item">
+                    <a href="elements-checkbox.html" class="sidenav__link">
+                      <span class="sidenav__text">Флажки (Checkbox)</span>
+                    </a>
+                  </li>
+
+                  <li class="sidenav__item">
+                    <a href="elements-select.html" class="sidenav__link">
+                      <span class="sidenav__text">Выбор (Select)</span>
+                    </a>
+                  </li>
+
+                  <li class="sidenav__item">
+                    <a href="elements-slider.html" class="sidenav__link">
+                      <span class="sidenav__text">Ползунок (Slider)</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              
+
+              <!-- Form Labels -->
+              <li class="sidenav__item">
+                <a href="#0" class="sidenav__link">                  
+                  <span class="sidenav__text">Подписи к полям</span>
+                </a>
+
+                <button class="reset sidenav__sublist-control js-sidenav__sublist-control js-tab-focus" aria-label="Toggle sub navigation">
+                  <svg class="icon" viewBox="0 0 12 12"><polygon points="4 3 8 6 4 9 4 3"/></svg>
+                </button>
+
+                <ul class="sidenav__list">
+                  <li class="sidenav__item">
+                    <a href="label-placeholder.html" class="sidenav__link">
+                      <span class="sidenav__text">Без подписей (Placeholder)</span>
+                    </a>
+                  </li>
+        
+                  <li class="sidenav__item">
+                    <a href="label-default.html" class="sidenav__link">
+                      <span class="sidenav__text">Подпись сверху (Label)</span>
+                    </a>
+                  </li>
+
+                  <li class="sidenav__item">
+                    <a href="label-floating.html" class="sidenav__link">
+                      <span class="sidenav__text">Плавающие подписи (Floating label)</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+
+              <!-- Form Layout -->
+              <li class="sidenav__item">
+                <a href="#0" class="sidenav__link">                  
+                  <span class="sidenav__text">Варианты разметки форм</span>
+                </a>
+
+                <button class="reset sidenav__sublist-control js-sidenav__sublist-control js-tab-focus" aria-label="Toggle sub navigation">
+                  <svg class="icon" viewBox="0 0 12 12"><polygon points="4 3 8 6 4 9 4 3"/></svg>
+                </button>
+
+                <ul class="sidenav__list">
+                  <li class="sidenav__item">
+                    <a href="form-layout-1.html" class="sidenav__link">
+                      <span class="sidenav__text">Подписи сверху</span>
+                    </a>
+                  </li>
+        
+                  <li class="sidenav__item">
+                    <a href="form-layout-2.html" class="sidenav__link">
+                      <span class="sidenav__text">Подписи слева 1</span>
+                    </a>
+                  </li>
+
+                  <li class="sidenav__item">
+                    <a href="form-layout-3.html" class="sidenav__link">
+                      <span class="sidenav__text">Подписи слева 2</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="sidenav__item">
+                <a href="form-validation.html" class="sidenav__link" aria-current="page">
+                  <span class="sidenav__text">Валидация форм</span>
+                </a>
+              </li>
+            </ul>
+
+            <!--
+            <div class="sidenav__divider margin-y-xs" role="presentation"></div>
+
+            <div class="sidenav__label margin-bottom-xxxs">
+              <span class="text-sm color-contrast-medium">Other</span>
+            </div>
+            -->
+
+          </nav>
+          
+          <!-- end sidebar content -->
+        </div>
+      </div>
+    </aside>
+
+
+
+     <!-- start main content -->
+    <main class="position-relative z-index-1 flex-grow min-height-100vh">
+     
+      <div class="padding-x-lg padding-x-xxl@lg padding-y-lg">
+        <h1>Валидация <span class="block text-xs color-contrast-medium">(Проверка заполнения полей)</span></h1>
+
+
+
+        <section class="padding-top-md margin-top-lg">
+          <div class="">
+            
+            <!-- Sign Up for Lesson -->
+            <div class="box margin-bottom-lg max-width-xxs">            
+    
+              <form class="sign-up-form js-form-validation-ui" action="#" validate>
+                <div class="text-component margin-bottom-md">
+                  <h4>Запишись на пробний урок!</h4>
+                </div>
+  
+  
+                <fieldset class="margin-bottom-md">
+                  <div class="margin-bottom-sm">
+                    <label class="form-label margin-bottom-xxxs" for="input-name">Ваше имя</label>
+                    <input class="form-control width-100%" type="text" name="input-name" id="input-name" value="" placeholder=" " required pattern=".*\S.*">
+                  </div>
+
+                  <div class="margin-bottom-sm">
+                    <label class="form-label margin-bottom-xxxs" for="input-email">Email</label>
+                    <input class="form-control width-100%" type="email" name="input-email" id="input-email" value="" placeholder=" " required pattern="[^@]+@[^\.]+\..+">
+                  </div>
+
+                  <div class="margin-bottom-sm">
+                    <label class="form-label margin-bottom-xxxs" for="input-phone">Телефон (необязательно)</label>
+                    <input class="form-control width-100%" type="tel" name="input-phone" id="input-phone" placeholder="+380 (__) ___-__-__" data-slots="_">
+                  </div>
+                </fieldset>
+  
+                <fieldset class="margin-bottom-sm">                
+  
+                  <div class="margin-bottom-sm">
+                    <p class="form-label margin-bottom-xxs">Укажите Ваш возраст</p>
+                
+                    <ul class="flex flex-wrap gap-md">
+                      <li>
+                        <input class="radio" type="radio" name="radio-age" id="age-1" checked>
+                        <label for="age-1">18-30 лет</label>
+                      </li>
+                
+                      <li>
+                        <input class="radio" type="radio" name="radio-age" id="age-2">
+                        <label for="age-2">31-45 лет</label>
+                      </li>
+                
+                      <li>
+                        <input class="radio" type="radio" name="radio-age" id="age-3">
+                        <label for="age-3">46-60 лет</label>
+                      </li>
+                    </ul>
+                  </div>
+  
+                  <div class="margin-bottom-xxxs">
+                    <ul class="radio-switch-v2">
+                      <li class="radio-switch-v2__item">
+                        <input class="radio-switch-v2__input reset" type="radio" name="input-gender" id="gender-man" checked>
+                        <label class="radio-switch-v2__label" for="gender-man">Мужчина</label>
+                      </li>
+      
+                      <li class="radio-switch-v2__item">
+                        <input class="radio-switch-v2__input reset" type="radio" name="input-gender" id="gender-woman">
+                        <label class="radio-switch-v2__label" for="gender-woman">Женщина</label>
+                        <div aria-hidden="true" class="radio-switch-v2__toggle"><span class="radio-switch-v2__marker"></span></div>
+                      </li>
+                    </ul>
+                  </div>
+                </fieldset>
+  
+                <div class="margin-bottom-sm">
+                  <button class="btn btn--primary btn--md width-100%" type="submit">Записаться бесплатно!</button>
+                </div>
+  
+                <div class="text-center">
+                  <p class="text-xs color-contrast-medium">Записываясь на урок, вы соглашаетесь с нашими <a class="color-contrast-high" href="#0">Правилами</a> и <a class="color-contrast-high" href="#0">Политикой конфиденциальности</a>.</p>
+                </div>
+              </form>
+            </div>
+            
+          </div>
+        </section>
+    
+        
+      </div> <!-- /.container -->
+      
+    </main>
+    <!-- end main content -->
+
+  </div>
+
+
+
+  <!-- Scripts -->
+  <script src="assets/js/scripts.js"></script>
+
+</body>
+</html>
